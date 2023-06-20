@@ -74,6 +74,7 @@ export function ProfileDetails({
             gap={mobile ? '16' : '12'}
             justifyContent="center"
             margin="8"
+            name="profileDetails"
             style={{ textAlign: 'center' }}
           >
             <Box
@@ -86,7 +87,7 @@ export function ProfileDetails({
             >
               <CloseButton onClose={onClose} />
             </Box>{' '}
-            <Box marginTop={mobile ? '24' : '0'}>
+            <Box marginTop={mobile ? '24' : '0'} name="profileDetailsAvatar">
               <Avatar
                 address={address}
                 imageUrl={ensAvatar}
@@ -99,7 +100,7 @@ export function ProfileDetails({
               gap={mobile ? '4' : '0'}
               textAlign="center"
             >
-              <Box textAlign="center">
+              <Box name="profileDetailsAccount" textAlign="center">
                 <Text
                   as="h1"
                   color="modalText"
@@ -111,7 +112,7 @@ export function ProfileDetails({
                 </Text>
               </Box>
               {balanceData && (
-                <Box textAlign="center">
+                <Box name="profileDetailsBalance" textAlign="center">
                   <Text
                     as="h1"
                     color="modalTextSecondary"
@@ -131,6 +132,7 @@ export function ProfileDetails({
             gap="8"
             margin="2"
             marginTop="16"
+            name="profileDetailsActions"
           >
             <ProfileDetailsAction
               action={copyAddressAction}
